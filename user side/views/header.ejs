@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>JKUAT Transcripts System</title>
+
+      
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css"
+        integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJtE" crossorigin="anonymous">
+   
+       <style type="text/css">
+        .nav.navbar-nav.navbar-right li a {
+                color: black;
+        }
+        .nav.navbar-nav li a {
+            color: black;
+        }
+        .navbar-brand {
+            color: black;
+        }
+                  
+         
+        </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Static navbar -->
+    <nav class="mb-4 navbar navbar-expand-lg navbar-dark bg-unique"  style="background-color: whitesmoke">
+        <a class="navbar-brand" href="#">JKUAT Transcript System</a>
+        <span class="navbar-toggler-icon"></span>
+
+      <div class="container-fluid">
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav " role="tablist" >
+            <li ><a href="/home/dashboard">Home</a></li>
+            <li ><a href="/home/viewtranscripts">Generated Transcripts</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Receipients <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/home/adduser">Add a new user</a></li>
+                  <li><a href="/home/receipients">Manage existing Recipients</a></li>
+                </ul>
+              </li>
+            
+            </li>
+            <li ><a href="/home/viewtranscripts">Batch issue</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li ><a href="/home/logout">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>

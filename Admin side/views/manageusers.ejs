@@ -1,0 +1,76 @@
+<%- include header.ejs %>
+<div class="container">
+	<div class="row">
+
+
+        <div class="col-md-12">
+        <h4>Available users</h4>
+        <div class="table-responsive">
+
+
+              <table id="mytable" class="table table-bordred table-striped">
+
+                   <thead>
+
+                   <th><input type="checkbox" id="checkall" /></th>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>Password</th>
+                                <th>Centre ID</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+
+                   </thead>
+    <tbody>
+
+                <% if(data.length){
+
+                 for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><input type="checkbox" class="checkthis" /></td>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].name%></td>
+                    <td><%=data[i].username%></td>
+                    <td><%=data[i].password%></td>
+                    <td><%=data[i].centre_id%></td>
+                    <td><a  href="/home/edit/<%=data[i].id%>"     class="btn btn-sm btn-success">Edit  </a></td>
+                    <td><a  href="/home/delete/<%=data[i].id%>"   class="btn btn-sm btn-danger"> Delete</a></td>
+
+                </tr>
+            <% }
+
+             }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+
+
+
+    </tbody>
+
+</table>
+
+        <div class="clearfix">
+            <ul class="pagination pull-right">
+            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+            <li class="active"><a href="/home/manageusers">1</a></li>
+            <li><a href="/home/manageusers">2</a></li>
+            <li><a href="/home/manageusers">3</a></li>
+            <li><a href="/home/manageusers">4</a></li>
+            <li><a href="/home/manageusers">5</a></li>
+            <li><a href="/home/manageusers"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+            </ul>
+
+            </div>
+
+        </div>
+	</div>
+</div>
+
+
+
+
+<%- include footer.ejs %>
